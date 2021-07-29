@@ -7,8 +7,8 @@ This is my solution for three tasks prepared by you. As suggested in the descrip
 
 ## How to build
 
-In order to run it just load it to your IDE, download dependecies via Maven and you are ready to go.
+In order to run it just load it to your IDE, download dependencies via Maven and you are ready to go.
 
 ## How to run
 
-Starting point is Main() method in `com.mkrosnicki.Main`.
+Starting point is main method in `com.mkrosnicki.Main`.
