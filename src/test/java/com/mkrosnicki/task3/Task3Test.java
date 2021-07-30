@@ -37,7 +37,7 @@ class Task3Test {
   }
 
   @Test
-  @DisplayName("Example from instruction with additional joined nodes")
+  @DisplayName("Example from instruction with additional joined vertices")
   public void displayResultsFor_testCase2() {
     final Task3 task3 = new Task3();
     final List<List<Integer>> testData = Lists.newArrayList(
@@ -52,7 +52,7 @@ class Task3Test {
   }
 
   @Test
-  @DisplayName("Example from instruction with additional disjoint nodes")
+  @DisplayName("Example from instruction with additional disjoint vertices")
   public void displayResultsFor_testCase3() {
     final Task3 task3 = new Task3();
     final List<List<Integer>> testData = Lists.newArrayList(
@@ -67,7 +67,7 @@ class Task3Test {
   }
 
   @Test
-  @DisplayName("Self pointing nodes")
+  @DisplayName("Self pointing vertices")
   public void displayResultsFor_testCase4() {
     final Task3 task3 = new Task3();
     final List<List<Integer>> testData = Lists.newArrayList(
