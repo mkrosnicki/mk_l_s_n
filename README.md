@@ -5,10 +5,10 @@
 Hi,
 This is my solution for three tasks prepared by you. As suggested in the description, this is simple console application. I hope it provides correct results :) 
 
-## Requirements
+## Prerequisites
 
 * IDE
-* Java 8+
+* JDK 8+
 * Maven
 
 ## How to build
