@@ -2,6 +2,7 @@ package com.mkrosnicki.task1;
 
 import com.google.common.collect.Sets;
 
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public class Task1 {
     System.out.println(listMeasurer.apply(input));
   }
 
-  String getSortedListToString(final List<Integer> integers) {
+  String getSortedListToString(final Collection<Integer> integers) {
     return integers.stream()
             .distinct()
             .sorted()
@@ -35,22 +36,22 @@ public class Task1 {
             .collect(Collectors.joining(" "));
   }
 
-  String getListCountString(final List<Integer> integers) {
+  String getListCountString(final Collection<Integer> integers) {
     return "count: " + integers.size();
   }
 
-  String getListCountDistinctString(final List<Integer> integers) {
+  String getListCountDistinctString(final Collection<Integer> integers) {
     return "distinct: " + Sets.newHashSet(integers).size();
   }
 
-  String getMinListValueString(final List<Integer> integers) {
+  String getMinListValueString(final Collection<Integer> integers) {
     return "min: " + integers.stream()
             .min(Comparator.naturalOrder())
             .map(Objects::toString)
             .orElse("");
   }
 
-  String getMaxListValueString(final List<Integer> integers) {
+  String getMaxListValueString(final Collection<Integer> integers) {
     return "max: " + integers.stream()
             .max(Comparator.naturalOrder())
             .map(Objects::toString)
