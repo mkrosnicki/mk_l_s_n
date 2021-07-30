@@ -18,6 +18,9 @@ public class Task2 {
   }
 
   public void displayResultsFor(final List<Integer> input) {
+    if (isNull(input)) {
+      throw new IllegalArgumentException("Input cannot be null!");
+    }
     if (input.size() < 2) {
       return;
     }

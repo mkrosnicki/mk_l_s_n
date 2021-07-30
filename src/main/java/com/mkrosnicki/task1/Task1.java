@@ -8,9 +8,14 @@ import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
+
 public class Task1 {
 
   public void displayResultsFor(final List<Integer> input) {
+    if (isNull(input)) {
+      throw new IllegalArgumentException("Input cannot be null!");
+    }
     displayResultForMeasurer(input, this::getSortedListToString);
     displayResultForMeasurer(input, this::getListCountString);
     displayResultForMeasurer(input, this::getListCountDistinctString);

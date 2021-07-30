@@ -5,9 +5,15 @@ import com.google.common.collect.Lists;
 import java.util.Collection;
 import java.util.List;
 
+import static java.util.Objects.isNull;
+
 public class Task3 {
 
   public void displayResultsFor(final Collection<List<Integer>> input) {
+
+    if (isNull(input)) {
+      throw new IllegalArgumentException("Input cannot be null!");
+    }
 
     final List<Edge> edges = Lists.newArrayList();
 
