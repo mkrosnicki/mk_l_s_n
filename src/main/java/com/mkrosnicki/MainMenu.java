@@ -14,8 +14,6 @@ import static java.util.Objects.isNull;
 
 public class MainMenu {
 
-  private static final String QUIT_OPTION = "0";
-
   public void start() {
     showMainMenu();
   }
@@ -32,7 +30,7 @@ public class MainMenu {
       if (scanner.hasNext()) {
         selectedOption = scanner.next();
 
-        switch (selectedOption) {
+        switch (selectedOption.toUpperCase()) {
           case "1":
             showSubmenu_Task1(scanner);
             break;
@@ -42,7 +40,7 @@ public class MainMenu {
           case "3":
             showSubmenu_Task3(scanner);
             break;
-          case QUIT_OPTION:
+          case "Q":
             displayFarewell();
             appRunning = false;
             break;
@@ -60,7 +58,7 @@ public class MainMenu {
     System.out.println("1 - TASK 1");
     System.out.println("2 - TASK 2");
     System.out.println("3 - TASK 3");
-    System.out.println(String.format("%s - Quit", QUIT_OPTION));
+    System.out.println("Q - Quit");
   }
 
   private void showSubmenu_Task1(final Scanner scanner) {
