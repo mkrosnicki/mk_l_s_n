@@ -6,14 +6,20 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-class Graph {
+final class Graph {
 
-  final List<List<Integer>> adjacencyList = new ArrayList<>();
+  private final List<List<Integer>> adjacencyList;
 
-  Graph(final Collection<Edge> edges) {
+  Graph(final List<List<Integer>> adjacencyList) {
+    this.adjacencyList = adjacencyList;
+  }
+
+  static Graph madeOf(final Collection<Edge> edges) {
+
     if (edges.isEmpty()) {
       throw new IllegalArgumentException("Graph requires some edges to be instantiated.");
     }
+    final List<List<Integer>> adjacencyList = new ArrayList<>();
 
     final int maxVertexIndex = edges.stream().mapToInt(Edge::getHigherVertexIndex).max().getAsInt();
 
@@ -24,6 +30,8 @@ class Graph {
     for (final Edge current : edges) {
       adjacencyList.get(current.getSrc()).add(current.getDest());
     }
+
+    return new Graph(adjacencyList);
   }
 
   int getSubgraphsCount(final CountingMode countingMode) {

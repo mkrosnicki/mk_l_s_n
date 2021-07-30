@@ -24,7 +24,7 @@ public class Task3 {
       edges.add(new Edge(integers.get(0), integers.get(1)));
     }
 
-    final Graph g = new Graph(edges);
+    final Graph g = Graph.madeOf(edges);
     final int subgraphsCount = g.getSubgraphsCount(Graph.CountingMode.IGNORE_NOT_CONNECTED_VERTICES);
 
     System.out.println(subgraphsCount);

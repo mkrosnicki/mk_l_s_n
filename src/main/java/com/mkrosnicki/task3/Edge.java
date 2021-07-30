@@ -1,6 +1,6 @@
 package com.mkrosnicki.task3;
 
-class Edge {
+final class Edge {
   private final int src;
   private final int dest;
 
